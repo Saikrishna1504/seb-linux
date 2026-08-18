@@ -167,4 +167,12 @@ fi
 
 popd >/dev/null
 
-echo "Build output: ${BUILD_DIR}/bin/safe-exam-browser"
+target_name="safe-exam-browser"
+for arg in "${QMAKE_ARGS[@]}"; do
+  if [[ "${arg}" == *"dev_bypass"* ]]; then
+    target_name="safe-exam-browser_dev"
+    break
+  fi
+done
+
+echo "Build output: ${BUILD_DIR}/bin/${target_name}"
