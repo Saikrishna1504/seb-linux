@@ -1,4 +1,4 @@
-QT += core gui widgets network xml
+QT += core gui widgets network xml dbus
 
 # Safe Exam Browser for Linux: Browser Engine Detection
 # We support Qt WebEngine (primary) and WebKitGTK (fallback for RISC-V/Older systems).
